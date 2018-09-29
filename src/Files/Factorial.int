@@ -1,0 +1,17 @@
+Fac:
+    Fac$ComputeFac
+main: 
+    call ComputeFac 10
+Fac$ComputeFac:
+    if num < 12 goto ifTrue
+        num_aux := num * 2;
+        goto endElse
+    ifTrue:
+        num_aux := 1;
+    endElse:
+    while: if num < 10 goto endWhile
+        num_aux := 30;
+        num := 40;
+        goto while:
+   endWhile:
+return num_aux
